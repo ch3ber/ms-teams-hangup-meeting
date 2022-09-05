@@ -6,11 +6,11 @@ const MEETING_END_MIN = 30
 * This field is optional.
 * Set the time in ms.
 * 1000 => 1 second
-* 10000 => 1 minute
-* 50000 => 5 minutes
-* 100000 => 10 minutes
+* 60000 => 1 minute
+* 300000 => 5 minutes
+* 600000 => 10 minutes
 */
-const INTERVAL_CHECK = 10000
+const INTERVAL_CHECK = 60000
 
 // +-------------+
 // | script code |
