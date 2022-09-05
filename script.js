@@ -23,7 +23,11 @@ const currentMin = parseInt(date.toLocaleTimeString().split(':')[1])
 const hangupBtn = document.querySelector('#hangup-button')
 
 const interval = setInterval(() => {
-  if (currentHrs >= MEETING_END_HRS && currentMin >= MEETING_END_MIN) {
+  if (currentHrs > MEETING_END_HRS ) {
+    hangupBtn.click()
+    clearInterval(interval)
+  }
+  if (currentHrs === MEETING_END_HRS && currentMin >= MEETING_END_MIN) {
     hangupBtn.click()
     clearInterval(interval)
   }
